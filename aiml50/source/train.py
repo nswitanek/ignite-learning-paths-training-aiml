@@ -166,8 +166,8 @@ def main(run, source_path, target_path, epochs, batch, lr):
 
     # If we are online
     if not run.id.startswith('OfflineRun'):
-    # Log history
-    for i in history.history:
+        # Log history
+        for i in history.history:
             # We want to log only the last run metric
             run.log(i, history.history[i][len(history.history[i])-1])
 
